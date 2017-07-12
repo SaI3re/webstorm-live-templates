@@ -1,0 +1,16 @@
+<application>
+  <component name="DimensionService">
+    <location key="FileChooserDialogImpl.0.0.2560.1600" x="1094" y="373" />
+    <location key="WELCOME_SCREEN.0.0.2560.1600" x="1314" y="244" />
+    <location key="#com.intellij.ide.actions.ChooseComponentsToExportDialog.0.0.2560.1600" x="1032" y="663" />
+    <location key="#Browse_JetBrains_Plugins_.0.0.2560.1600" x="891" y="449" />
+    <location key="#Browse_Repositories.0.0.2560.1600" x="891" y="449" />
+    <location key="SettingsEditor.0.0.2560.1600" x="792" y="450" />
+    <location key="RollbackChangesDialog.0.0.2560.1600" x="365" y="507" />
+    <location key="find.popup.0.0.2560.1600" x="395" y="132" />
+    <location key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate.0.0.2560.1600" x="464" y="676" />
+    <location key="com.intellij.ide.util.TipDialog.0.0.2560.1600" x="394" y="611" />
+    <location key="com.intellij.openapi.editor.actions.MultiplePasteAction$1.0.0.2560.1600" x="1101" y="406" />
+    <size key="find.popup.0.0.2560.1600" width="784" height="630" />
+  </component>
+</application>

@@ -1,0 +1,18 @@
+<application>
+  <component name="PropertiesComponent">
+    <property name="evlsprt3.171" value="10" />
+    <property name="WebStorm.dumbRunEnabled" value="true" />
+    <property name="WebStorm.initialConfigurationShown" value="true" />
+    <property name="HbAutoCollapseBlocks" value="disabled" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/Desktop/settings.jar&#10;C:/Users/tomas.slama.WORKGROUP/.WebStorm2017.1/config/settings.jar&#10;C:/Users/tomas.slama.WORKGROUP/settings.jar&#10;C:/Users/tomas.slama.WORKGROUP&#10;C:/projects/airbank-web" />
+    <property name="DeploymentNotificationsComponent.WarnDisplayed.Java7&amp;Windows7FTPIssue" value="false" />
+    <property name="file.gist.reindex.count" value="16819" />
+    <property name="PLUGIN_FILTER" value="intellj&#10;repo&#10;sett&#10;settings&#10;Material" />
+    <property name="com.chrisrm.idea.MaterialThemeUI.theme" value="DARKER" />
+    <property name="Darcula.savedEditorTheme" value="_@user_Material Theme - Darker" />
+    <property name="Default.savedEditorTheme" value="_@user_Default" />
+    <property name="MTTabsHeight" value="42" />
+    <property name="idea.background.frame" value="https://raw.githubusercontent.com/mallowigi/material-theme-jetbrains-eap/master/src/main/resources/themes/wall.jpg,60" />
+    <property name="lastTip" value="1" />
+  </component>
+</application>

@@ -1,0 +1,72 @@
+<templateSet group="User">
+  <template name="cl" value="console.log($END$)" description="console log" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="For" value="&lt;For &#10;  each='$ITEM$'&#10;  index='$KEY$'&#10;  of={$DATA$}&#10;&gt;&#10;  $END$&#10;&lt;/For&gt;" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="ITEM" expression="&quot;item&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="KEY" expression="&quot;key&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="DATA" expression="&quot;data&quot;" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSX_HTML" value="true" />
+    </context>
+  </template>
+  <template name="If" value="&lt;If condition={$STRUDL$}&gt;&#10;  $END$&#10;&lt;/If&gt;" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="STRUDL" expression="&quot;strudl&quot;" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSX_HTML" value="true" />
+    </context>
+  </template>
+  <template name="ic" value="import $component$ from 'components/$base$/$component$'" description="Import component" toReformat="false" toShortenFQNames="true">
+    <variable name="component" expression="&quot;component&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="base" expression="&quot;base&quot;" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSX_HTML" value="true" />
+    </context>
+  </template>
+  <template name="Choose" value="&lt;Choose&gt;&#10;  &lt;When condition={$condition$}&gt;&#10;    $END$&#10;  &lt;/When&gt;&#10;  &lt;Otherwise&gt;&#10;       &#10;  &lt;/Otherwise&gt;&#10;&lt;/Choose&gt;" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="condition" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nc" value="import React from 'react'&#10;import PropTypes from 'prop-types'&#10;import { pure } from 'recompose'&#10;&#10;const $COMPONENT$ = ($PARAMETER$) =&gt; &#10;  &lt;div&gt;$END$&lt;/div&gt;&#10;&#10;&#10;$COMPONENT$.propTypes = {}&#10;$COMPONENT$.defaultProps = {}&#10;&#10;export default pure($COMPONENT$)&#10;" description="new component" toReformat="true" toShortenFQNames="true">
+    <variable name="COMPONENT" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMETER" expression="" defaultValue="&quot;props&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="cm" value="dangerouslySetInnerHTML={createMarkup($END$)}" description="Create markup" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nr" value="import createAction from 'redux-actions/lib/createAction'&#10;import handleActions from 'redux-actions/lib/handleActions'&#10;import { $store$ } from '../actionTypes'&#10;&#10;const initialState = {}&#10;&#10;export const reducer = handleActions({&#10;  &#10;}, initialState)&#10;&#10;export const actions = {&#10;  &#10;}" description="New Reducer" toReformat="true" toShortenFQNames="true">
+    <variable name="store" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSX_HTML" value="true" />
+    </context>
+  </template>
+  <template name="na" value="const $actionName$Handler = (state, action) =&gt; ({&#10;  ...state,&#10;  $propertyName$: action.payload&#10;})&#10;&#10;const $actionName$ = createAction($store$.$actionName$)&#10;[$store$.$actionName$]: $actionName$Handler&#10;$actionName$" description="New Action" toReformat="false" toShortenFQNames="true">
+    <variable name="actionName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="propertyName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="store" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSX_HTML" value="true" />
+    </context>
+  </template>
+  <template name="new container" value="import $page$ from './$page$'&#10;import compose from 'recompose/compose'&#10;import bindActionCreators from 'redux/lib/bindActionCreators'&#10;import { connect } from 'react-redux'&#10;&#10;const mapStateToProps = state =&gt; ({})&#10;&#10;const mapActionCreators = dispatch =&gt; ({&#10;  actions: bindActionCreators(&#10;    {&#10;      &#10;    },&#10;    dispatch&#10;  )&#10;})&#10;&#10;const enhance = compose(&#10;  connect(mapStateToProps, mapActionCreators)&#10;)&#10;&#10;export default enhance($page$)&#10;" description="New container" toReformat="false" toShortenFQNames="true">
+    <variable name="page" expression="clipboard()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="new page container" value="import $page$ from './$page$'&#10;import provideHooks from 'redial/lib/provideHooks'&#10;import compose from 'recompose/compose'&#10;import bindActionCreators from 'redux/lib/bindActionCreators'&#10;import { connect } from 'react-redux'&#10;import { getPage, selectors as pageSelectors } from 'store/modules/PageStore'&#10;&#10;const path = $END$&#10;const hooks = {&#10;  fetch: ({ dispatch }) =&gt; Promise.all([&#10;    dispatch(getPage(path))&#10;  ])&#10;}&#10;&#10;const mapStateToProps = state =&gt; {&#10;  let currentPage = pageSelectors.currentPageSelector(path, state)&#10;  return ({&#10;    meta: pageSelectors.metaSelector(currentPage),&#10;    header: pageSelectors.headerSelector(currentPage)&#10;  })&#10;}&#10;&#10;const mapActionCreators = dispatch =&gt; ({&#10;  actions: bindActionCreators(&#10;    {&#10;      &#10;    },&#10;    dispatch&#10;  )&#10;})&#10;&#10;const enhance = compose(&#10;  provideHooks(hooks),&#10;  connect(mapStateToProps, mapActionCreators)&#10;)&#10;&#10;export default enhance($page$)&#10;&#10;" description="New page container" toReformat="false" toShortenFQNames="true">
+    <variable name="page" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>
